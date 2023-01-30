@@ -4,6 +4,8 @@ from model.my_model import MyModel
 from view.my_view import MyView
 from presenter.my_presenter import MyPresenter
 
+
+
 def main() -> None:
     model = MyModel()
     view = MyView()

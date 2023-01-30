@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from abc import ABC, abstractmethod
-from IPresenter import IPresenter
+from presenter import IPresenter
 
 
 class IView(ABC):

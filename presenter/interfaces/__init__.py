@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
-from .ICommand import ICommand
-from .IObserver import IObserver
-from .IPresenterView import IPresenterView
+
+from .IPresenter import IPresenter
+from .IModelProvider import IProvider

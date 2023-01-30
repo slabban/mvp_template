@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
-from .model import recordManager
-from .presenter import ICommand, IObserver
 
+
+from .IView import IView
