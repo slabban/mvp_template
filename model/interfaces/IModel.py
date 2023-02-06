@@ -9,5 +9,5 @@ class IModel(ABC):
     of the model package"""
 
     @abstractmethod
-    def operation(self):
+    def perform_business_logic(self):
         pass
