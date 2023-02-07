@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-from interfaces import IModel
+
+from model.interfaces import IModel
 
 
 class myModel(IModel):

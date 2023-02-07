@@ -4,9 +4,8 @@ from abc import ABC, abstractmethod
 
 # The provider class is included here and would normally take the place of the model interface
 # that is currently being passed in. The model is being used here for simplicitys sake
-from IModelProvider import IProvider
-from model import IModel
-from view import IView
+from model.interfaces import IModel
+from view.interfaces import IView
 
 
 class IPresenter(ABC):
@@ -25,4 +24,8 @@ class IPresenter(ABC):
 
     @abstractmethod
     def update_model(self):
+        pass
+
+    @abstractmethod
+    def run(self):
         pass

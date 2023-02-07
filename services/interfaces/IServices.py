@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from abc import ABC, abstractmethod
-from model.interfaces import IModel 
+from model.interfaces import IModel
 
 class IServices(ABC):
     """The Services interface acts as the medium between the presenter and the mode. 

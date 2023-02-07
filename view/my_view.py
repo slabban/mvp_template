@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
+from presenter.interfaces import IPresenter
+from view.interfaces import IView
 
-from common.interfaces import IPresenterView
 
 
-class view(object):
-    def __init__(self, view: IPresenterView) -> None:
-        self.view = view
+class MyView(IView):
+    def __init__(self) -> None:
+        super().__init__()
+    
+    def get_user_input(self) -> dict:
+        print("getting the user input")
+    
+    def update_view(self, data: dict):
+        print("updating the gui")
+    

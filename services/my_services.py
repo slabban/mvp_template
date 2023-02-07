@@ -1,6 +1,7 @@
 from interfaces import IServices
 from model.interfaces import IModel
 
+
 class myServices(IServices):
     def __init__(self, my_model: IModel) -> None:
         super().__init__(my_model)
@@ -12,6 +13,4 @@ class myServices(IServices):
         print("Pushing local data to a repository")
 
 
-if __name__ == "__main__":
-    my_model = IModel()
 
