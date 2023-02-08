@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 # The provider class is included here and would normally take the place of the model interface
 # that is currently being passed in. The model is being used here for simplicitys sake
-from model.interfaces import IModel
+from services.interfaces import IServices
 from view.interfaces import IView
 
 
@@ -14,8 +14,8 @@ class IPresenter(ABC):
     The model and view should have no knowledge of each other as they are mediated
     bertween the presenter"""
 
-    def __init__(self, model: IModel, view: IView):
-        self._model = model
+    def __init__(self, service: IServices, view: IView):
+        self._model = service
         self._view = view
 
     @abstractmethod

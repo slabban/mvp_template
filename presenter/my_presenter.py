@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 
 from presenter.interfaces import IPresenter
-from model.interfaces import IModel
+from services.interfaces import IServices
 from view.interfaces import IView
 
 class MyPresenter (IPresenter):
-    
-    def __init__(self, model: IModel, view: IView):
-        super().__init__(model, view)
+
+    def __init__(self, service: IServices, view: IView):
+        super().__init__(service, view)    
+    # def __init__(self, s: IModel, view: IView):
+    #     super().__init__(model, view)
     
     def update_view(self):
         print("updating the gui")

@@ -1,4 +1,3 @@
-# print("running services init")
-# import sys
-# sys.path.append('../model')
-#from model.interfaces import IModel
+#!/usr/bin/env python3
+
+from .IServices import IServices
