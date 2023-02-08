@@ -2,7 +2,7 @@ from services.interfaces import IServices
 from model.interfaces import IModel
 
 
-class myServices(IServices):
+class concreteService(IServices):
     def __init__(self, my_model: IModel) -> None:
         super().__init__(my_model)
         

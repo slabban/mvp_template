@@ -3,7 +3,7 @@
 from model.interfaces import IModel
 
 
-class myModel(IModel):
+class concreteModel(IModel):
     def __init__(self) -> None:
         super().__init__()
         pass

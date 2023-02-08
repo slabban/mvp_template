@@ -4,7 +4,7 @@ from presenter.interfaces import IPresenter
 from services.interfaces import IServices
 from view.interfaces import IView
 
-class MyPresenter (IPresenter):
+class concretePresenter(IPresenter):
 
     def __init__(self, service: IServices, view: IView):
         super().__init__(service, view)    
