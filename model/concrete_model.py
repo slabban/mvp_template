@@ -8,5 +8,5 @@ class concreteModel(IModel):
         super().__init__()
         pass
     
-    def perform_business_logic(self):
-        print("I am have performed some internal logic..")
+    def get_data(self):
+        return "Model Data"

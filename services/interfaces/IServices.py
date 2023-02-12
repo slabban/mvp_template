@@ -7,8 +7,6 @@ class IServices(ABC):
     """The Services interface acts as the medium between the presenter and the mode. 
     It's purpose is to encapsulate the model features as
     services that would fetch information from repositories and databases"""
-    def __init__(self, my_model: IModel) -> None:
-        self.my_model = my_model
 
     @abstractmethod
     def fetch_data(self):

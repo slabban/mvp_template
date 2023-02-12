@@ -15,13 +15,12 @@ class IPresenter(ABC):
     bertween the presenter"""
 
     def __init__(self, service: IServices, view: IView):
-        self._model = service
-        self._view = view
+        pass
 
     @abstractmethod
     def update_view(self):
         pass
-
+    
     @abstractmethod
     def update_model(self):
         pass

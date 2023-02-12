@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 from presenter.interfaces import IPresenter
 from view.interfaces import IView
+import tkinter as tk
 
 
 
-class MyView(IView):
+class ConcreteView(IView):
     def __init__(self) -> None:
-        super().__init__()
+        self.presenter : IPresenter 
     
-    def get_user_input(self) -> dict:
-        print("getting the user input")
+    def init_gui(self):
+        self._root = tk.Tk()
+        self._label = tk.Label(text=self.update_view())
+        self._label.pack()
+
+    def start(self):
+        self.init_gui()
+        self.mainloop()
+        
+    def mainloop(self):
+        self._root.mainloop()
     
-    def update_view(self, data: dict):
-        print("updating the gui")
+    def update_view(self):
+        return self.presenter.update_view()
     
