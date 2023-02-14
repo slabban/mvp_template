@@ -11,3 +11,7 @@ class IModel(ABC):
     @abstractmethod
     def get_data(self):
         pass
+    
+    @abstractmethod
+    def notify(self):
+        pass
