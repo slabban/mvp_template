@@ -8,10 +8,29 @@ class IServices(ABC):
     It's purpose is to encapsulate the model features as
     services that would fetch information from repositories and databases"""
 
+    #TODO: encapsulate the repository fetching logic within a seprate class that services can access
+    #TODO: Initialize constructors for all interfaces
+
     @abstractmethod
-    def fetch_data(self):
+    def set_data(self):
+        pass
+
+    @abstractmethod
+    def update_model(self):
         pass
 
     @abstractmethod
     def push_data(self, data: dict):
+        pass
+
+    @abstractmethod
+    def attach(self):
+        pass
+
+    @abstractmethod
+    def detach(self):
+        pass
+  
+    @abstractmethod
+    def notify(self):
         pass

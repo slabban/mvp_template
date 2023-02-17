@@ -11,7 +11,7 @@ class ConcreteView(IView):
     
     def init_gui(self):
         self._root = tk.Tk()
-        self._label = tk.Label(text=self.update_view())
+        self._label = tk.Label(text="Test Gui")
         self._label.pack()
 
     def start(self):
@@ -21,6 +21,7 @@ class ConcreteView(IView):
     def mainloop(self):
         self._root.mainloop()
     
-    def update_view(self):
-        return self.presenter.update_view()
+    def display_data(self, data):
+        self.viewed_data = tk.Label(text=data)
+        self.viewed_data.pack()
     

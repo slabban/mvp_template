@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 class IView(ABC):
 
     @abstractmethod
-    def update_view(self):
+    def display_data(self):
         pass
     
     @abstractmethod

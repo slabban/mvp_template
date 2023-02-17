@@ -12,11 +12,11 @@ class concretePresenter(IPresenter):
         self.service = service
         self.view = view   
     
-    def update_view(self):
-        return self.service.fetch_data()
+    def update_view(self, data):
+        self.view.display_data(data)
 
     def update_model(self):
-        self.service.fetch_data()
+        self.service.update_model("dummy_data")
             
     def run(self):
         self.view.start()
