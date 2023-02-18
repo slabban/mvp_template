@@ -7,15 +7,15 @@ class concreteService(IServices):
     def __init__(self, my_model: IModel) -> None:
         self.model = my_model
         
-    def set_data(self):
+    def send_data(self):
         data = self.model.get_data()
-        self.notify(data)
+        self._notify(data)
+    
+    def get_data(self):
+        return self.model.get_data()
     
     def update_model(self, data):
         self.model.set_data(data)
-
-    def push_data(self, data: dict):
-        print("Pushing local data to a repository")
 
     def attach(self, presenter : IPresenter):
         self.presenter = presenter
@@ -23,8 +23,10 @@ class concreteService(IServices):
     def detach(self):
         self.presenter = None
 
-    def notify(self, data):
+    def _notify(self, data):
         self.presenter.update_view(data)
 
+    def push_data(self, data: dict):
+        print("Pushing local data to a repository")
 
 
