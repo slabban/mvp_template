@@ -6,8 +6,9 @@ import tkinter as tk
 
 
 class ConcreteView(IView):
-    def __init__(self) -> None:
-        self.presenter : IPresenter 
+    def __init__(self):
+        super().__init__()
+
     
     def init_gui(self):
         self._root = tk.Tk()
@@ -24,4 +25,7 @@ class ConcreteView(IView):
     def display_data(self, data):
         self.viewed_data = tk.Label(text=data)
         self.viewed_data.pack()
+
+    def set_data(self, data):
+        self.presenter.update_model(data)
     

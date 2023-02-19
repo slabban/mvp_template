@@ -15,7 +15,8 @@ class IPresenter(ABC):
     bertween the presenter"""
 
     def __init__(self, service: IServices, view: IView):
-        pass
+        self.service = service
+        self.view = view   
 
     @abstractmethod
     def update_view(self):

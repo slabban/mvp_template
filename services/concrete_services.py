@@ -5,7 +5,7 @@ from presenter.interfaces import IPresenter
 
 class concreteService(IServices):
     def __init__(self, my_model: IModel) -> None:
-        self.model = my_model
+        super().__init__(my_model)
         
     def set_data(self):
         data = self.model.get_data()

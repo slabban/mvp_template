@@ -10,6 +10,8 @@ class IServices(ABC):
 
     #TODO: encapsulate the repository fetching logic within a seprate class that services can access
     #TODO: Initialize constructors for all interfaces
+    def __init__(self, my_model: IModel) -> None:
+        self.model = my_model
 
     @abstractmethod
     def set_data(self):
