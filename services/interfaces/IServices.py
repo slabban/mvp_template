@@ -2,6 +2,7 @@
 
 from abc import ABC, abstractmethod
 from model.interfaces import IModel
+from presenter.interfaces import IPresenter
 
 class IServices(ABC):
     """The Services interface acts as the medium between the presenter and the mode. 
@@ -12,6 +13,7 @@ class IServices(ABC):
     #TODO: Initialize constructors for all interfaces
     def __init__(self, my_model: IModel) -> None:
         self.model = my_model
+        self.presenter : IPresenter = None 
 
     @abstractmethod
     def set_data(self):
@@ -26,13 +28,13 @@ class IServices(ABC):
         pass
 
     @abstractmethod
-    def attach(self):
+    def attachPresenter(self, presenter : IPresenter): 
         pass
 
     @abstractmethod
-    def detach(self):
+    def detachPresenter(self):
         pass
   
     @abstractmethod
-    def notify(self):
+    def notifyPresenter(self):
         pass

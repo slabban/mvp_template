@@ -15,7 +15,7 @@ def main() -> None:
     view = ConcreteView()
     presenter = concretePresenter(service=service, view=view)
     view.presenter = presenter
-    service.attach(presenter=presenter)
+    service.attachPresenter(presenter=presenter)
     presenter.run()
 
 
