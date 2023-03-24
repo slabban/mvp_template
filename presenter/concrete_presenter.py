@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from presenter.interfaces import IPresenter
+from .interfaces import IPresenter
 from services.interfaces import IServices
 from view.interfaces import IView
 

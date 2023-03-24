@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from model.interfaces import IModel
-from presenter.interfaces import IPresenter
+from .interfaces import IModel
+
 
 
 class concreteModel(IModel):

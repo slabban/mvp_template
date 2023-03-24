@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-from model.concrete_model import concreteModel 
-from view.concrete_view import ConcreteView
-from presenter.concrete_presenter import concretePresenter
-from services.concrete_services import concreteService
+from model import concreteModel 
+from view import ConcreteView
+from presenter import concretePresenter
+from services import concreteService
 
 
 

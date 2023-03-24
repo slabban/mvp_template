@@ -2,8 +2,6 @@
 
 from abc import ABC, abstractmethod
 
-# The provider class is included here and would normally take the place of the model interface
-# that is currently being passed in. The model is being used here for simplicitys sake
 from services.interfaces import IServices
 from view.interfaces import IView
 

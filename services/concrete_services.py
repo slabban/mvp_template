@@ -1,4 +1,4 @@
-from services.interfaces import IServices
+from .interfaces import IServices
 from model.interfaces import IModel
 from presenter.interfaces import IPresenter
 
